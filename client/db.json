@@ -1,0 +1,19 @@
+{
+    "phones": [
+        {
+            "product": "Apple iPhone 6s",
+            "color": "Stonegrey",
+            "price": "CHF 769"
+        },
+        {
+            "product": "Samsung Galaxy S8",
+            "color": "Midnight Blue",
+            "price": "CHF 569"
+        },
+        {
+            "product": "Huawei P9",
+            "color": "Caribbean Sea",
+            "price": "CHF 272"
+        }
+    ]
+}
