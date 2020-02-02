@@ -10,7 +10,7 @@ const middleware = require('./utils/middleware')
 
 let MONGODB_URI = process.env.MONGODB_URI
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
     MONGODB_URI = process.env.TEST_MONGODB_URI
 }
 
@@ -34,6 +34,11 @@ app.use('/apply', express.static('build'))
 
 app.use('/api/data', dataRouter)
 app.use('/api/dictionary', dictionaryRouter)
+
+if (process.env.NODE_ENV === 'test') {
+    const cypressRouter = require('./controllers/cypress')
+    app.use('/api/testing', cypressRouter)
+}
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
