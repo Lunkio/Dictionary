@@ -50,7 +50,7 @@ const ApplyDictionary = (props) => {
                     <Dataset />
                 </ApplyDictionaryStyle>
             </div>
-            <Button onClick={() => apply(props.editDictionary.valueSets)} color='blue' size='big' style={{'marginBottom': '2rem'}}>Apply</Button>
+            <Button id='apply' onClick={() => apply(props.editDictionary.valueSets)} color='blue' size='big' style={{'marginBottom': '2rem'}}>Apply</Button>
         </DivWrapper>
     )
 }

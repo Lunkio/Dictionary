@@ -227,15 +227,15 @@ const EditDictionary = (props) => {
                 <div>
                     <NameDiv style={dictionaryNameShow}>
                         <h4>{props.editDictionary.name}</h4>
-                        <Button onClick={setName} basic color='brown'>Rename</Button>
+                        <Button id='renameBtn' onClick={setName} basic color='brown'>Rename</Button>
                     </NameDiv>
                     <form onSubmit={renameDictionary} style={renameShow}>
                         <div className='form-row'>
                             <div className='form-group col-md-5'>
-                                <input type='text' value={newName} onChange={({ target }) => setNewName(target.value)} className='form-control' />
+                                <input id='renameInput' type='text' value={newName} onChange={({ target }) => setNewName(target.value)} className='form-control' />
                             </div>
                         </div>
-                        <button type='submit' className='btn btn-success'>Apply</button>
+                        <button id='submitRename' type='submit' className='btn btn-success'>Apply</button>
                         <div onClick={closeRename} className='btn btn-outline-secondary'>Cancel</div>
                     </form>
                 </div>
@@ -294,13 +294,13 @@ const EditDictionary = (props) => {
                     <div className='form-row' style={{'alignItems': 'start', 'justifyContent': 'space-between'}}>
                         <div className='form-group col-md-5'>
                             <label>Original value</label>
-                            <input type='text' name='original' placeholder='Original value' className='form-control' />
+                            <input id='originalAddId' type='text' name='original' placeholder='Original value' className='form-control' />
                         </div>
                         <div className='form-group col-md-5'>
                             <label>Desired value</label>
-                            <input type='text' name='desired' placeholder='Desired value' className='form-control' />
+                            <input id='desiredAddId' type='text' name='desired' placeholder='Desired value' className='form-control' />
                         </div>
-                        <button type='submit' className='btn btn-success' style={{'alignSelf': 'center', 'marginTop': '0.9rem'}}>Add <Icon name='add square'/></button>
+                        <button id='addBtn' type='submit' className='btn btn-success' style={{'alignSelf': 'center', 'marginTop': '0.9rem'}}>Add <Icon name='add square'/></button>
                     </div>
                 </form>
             </DictionaryStyleWide>
@@ -311,14 +311,14 @@ const EditDictionary = (props) => {
                     <form onSubmit={editValueSet} style={editFormShow}>
                         <div className='form-row' style={{'alignItems': 'start', 'justifyContent': 'space-between'}}>
                             <div className='form-group col-md-5'>
-                                <input type='text' value={newOriginal} onChange={({ target }) => setNewOriginal(target.value)} className='form-control' />
+                                <input id='originalEditId' type='text' value={newOriginal} onChange={({ target }) => setNewOriginal(target.value)} className='form-control' />
                             </div>
                             <div className='form-group col-md-5'>
-                                <input type='text' value={newDesired} onChange={({ target }) => setNewDesired(target.value)} className='form-control' />
+                                <input id='desiredEditId' type='text' value={newDesired} onChange={({ target }) => setNewDesired(target.value)} className='form-control' />
                             </div>
-                            <button type='submit' className='btn btn-success' style={{'alignSelf': 'center', 'marginBottom': '1rem'}}>Apply changes</button>
+                            <button id='applyEdit' type='submit' className='btn btn-success' style={{'alignSelf': 'center', 'marginBottom': '1rem'}}>Apply changes</button>
                         </div>
-                        <div className='btn btn-outline-info' onClick={close} style={{'marginBottom': '3rem'}}>Ready/Back</div>
+                        <div id='backBtn' className='btn btn-outline-info' onClick={close} style={{'marginBottom': '3rem'}}>Back</div>
                     </form>
                 </FormStyle>
             </div>

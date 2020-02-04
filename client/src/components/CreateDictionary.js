@@ -89,22 +89,22 @@ const CreateDictionary = (props) => {
                     <div className='form-row'>
                         <div className='form-group col-md-6'>
                             <label>Name</label>
-                            <input type='text' name='name' placeholder='Name of the dictionary' required className='form-control' />
+                            <input id='nameId' type='text' name='name' placeholder='Name of the dictionary' required className='form-control' />
                         </div>
                         <div className='from-group col-md-6'>
                             <label>Description</label>
-                            <input type='text' name='description' placeholder='Description (optional)' className='form-control' />
+                            <input id='descriptionId' type='text' name='description' placeholder='Description (optional)' className='form-control' />
                         </div>
                     </div>
                     <hr />
                         <div className='form-row' style={{'alignItems': 'start', 'justifyContent': 'space-between'}}>
                             <div className='form-group col-md-5'>
                                 <label>Original value</label>
-                                <input type='text' value={original} onChange={({ target }) => setOriginal(target.value)} name='original' placeholder='Original value' className='form-control' />
+                                <input id='originalId' type='text' value={original} onChange={({ target }) => setOriginal(target.value)} name='original' placeholder='Original value' className='form-control' />
                             </div>
                             <div className='from-group col-md-5'>
                                 <label>Desired value</label>
-                                <input type='text' value={desired} onChange={({ target }) => setDesired(target.value)} name='desired' placeholder='Desired value' className='form-control' />
+                                <input id='desiredId' type='text' value={desired} onChange={({ target }) => setDesired(target.value)} name='desired' placeholder='Desired value' className='form-control' />
                             </div>
                             <div onClick={addValue} className='btn btn-success' style={{'alignSelf': 'center', 'marginTop': '0.9rem'}}>Add <Icon name='add square'/></div>
                         </div>

@@ -114,6 +114,7 @@ const AllDictionaries = (props) => {
                             </Table>
                             <BtnContainer>
                                 <Button 
+                                    id='applyBtn'
                                     basic color='blue'
                                     style={{'height': '3rem'}}
                                     onClick={() => {props.editDictionary(dictionary)}}
