@@ -102,7 +102,7 @@ const CreateDictionary = (props) => {
                                 <label>Original value</label>
                                 <input id='originalId' type='text' value={original} onChange={({ target }) => setOriginal(target.value)} name='original' placeholder='Original value' className='form-control' />
                             </div>
-                            <div className='from-group col-md-5'>
+                            <div className='form-group col-md-5'>
                                 <label>Desired value</label>
                                 <input id='desiredId' type='text' value={desired} onChange={({ target }) => setDesired(target.value)} name='desired' placeholder='Desired value' className='form-control' />
                             </div>

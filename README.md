@@ -77,6 +77,10 @@ To transform the dataset values, a dictionary is required:
     </tr>
 </table>
 
+The 'Original value' -column represents the value to transform and
+the 'Desired value' -column is the wanted value. When this dictionary
+is applied to the Color -column of the example dataset, the desired
+dataset is achieved.
 Dictionaries can be edited and removed after creation.
 
 ### `Challenges`
